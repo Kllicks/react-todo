@@ -10,6 +10,16 @@ class TodoList extends Component {
         };
     }
 
+    componentDidMount() {
+        // Make the Ajax call
+        console.log(`about to retrieve todos`);
+        fetch(`/todos`)
+            .then(r => r.json())
+            .then(todoArray => {
+                console.table(todoArray);
+            })
+    }
+
     render() {
         return (
             <div>
