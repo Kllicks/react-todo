@@ -4,7 +4,8 @@ const List = (props) => {
     return (
         <ul>
             {props.items.map((item, index) => {
-                return <li key={index}>{item}</li>
+                console.log(item);
+                return <li key={index}>{item.name}</li>
             })}
         </ul>
     );
