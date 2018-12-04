@@ -17,7 +17,12 @@ class TodoList extends Component {
             .then(r => r.json())
             .then(todoArray => {
                 console.table(todoArray);
+                // const todoNames = todoArray.map(todo => todo.name);
+                this.setState({
+                    items : todoArray.map(todo => todo.name)
+                });
             })
+
     }
 
     render() {
